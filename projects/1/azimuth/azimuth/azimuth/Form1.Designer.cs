@@ -91,7 +91,7 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(637, 212);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(204, 88);
+            this.label5.Size = new System.Drawing.Size(233, 88);
             this.label5.TabIndex = 4;
             this.label5.Text = "azimuth is :";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -103,7 +103,7 @@
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(635, 82);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(206, 88);
+            this.button1.Size = new System.Drawing.Size(235, 88);
             this.button1.TabIndex = 5;
             this.button1.Text = "click  here to caculate ";
             this.button1.UseVisualStyleBackColor = false;

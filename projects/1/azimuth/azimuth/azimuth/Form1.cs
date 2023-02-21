@@ -27,7 +27,7 @@ namespace azimuth
             double D_Y = Y2 - Y1;
             double T = Math.Atan2(D_X, D_Y);
             T = (T * 180 / Math.PI);
-          
+            
             if (D_X < 0) 
             {
                 T = 360 + T;
@@ -37,7 +37,7 @@ namespace azimuth
 
         private void label5_Click(object sender, EventArgs e)
         {
-
+            
         }
     }
 }
