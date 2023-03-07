@@ -8,11 +8,13 @@ D:\karshenasi_arshad\webGIS\TAKLIF\1\azimuth\azimuth\azimuth\obj\Debug\azimuth.c
 D:\karshenasi_arshad\webGIS\TAKLIF\1\azimuth\azimuth\azimuth\obj\Debug\azimuth.exe
 D:\karshenasi_arshad\webGIS\TAKLIF\1\azimuth\azimuth\azimuth\obj\Debug\azimuth.pdb
 D:\karshenasi_arshad\webGIS\webGIS_ali_karimi\projects\1\azimuth\azimuth\azimuth\bin\Debug\azimuth.exe.config
-D:\karshenasi_arshad\webGIS\webGIS_ali_karimi\projects\1\azimuth\azimuth\azimuth\obj\Debug\azimuth.exe
-D:\karshenasi_arshad\webGIS\webGIS_ali_karimi\projects\1\azimuth\azimuth\azimuth\obj\Debug\azimuth.pdb
 D:\karshenasi_arshad\webGIS\webGIS_ali_karimi\projects\1\azimuth\azimuth\azimuth\bin\Debug\azimuth.exe
 D:\karshenasi_arshad\webGIS\webGIS_ali_karimi\projects\1\azimuth\azimuth\azimuth\bin\Debug\azimuth.pdb
-D:\karshenasi_arshad\webGIS\webGIS_ali_karimi\projects\1\azimuth\azimuth\azimuth\obj\Debug\azimuth.csprojResolveAssemblyReference.cache
-D:\karshenasi_arshad\webGIS\webGIS_ali_karimi\projects\1\azimuth\azimuth\azimuth\obj\Debug\azimuth.Form1.resources
+D:\karshenasi_arshad\webGIS\webGIS_ali_karimi\projects\1\azimuth\azimuth\azimuth\obj\Debug\azimuth.azimuth_form.resources
 D:\karshenasi_arshad\webGIS\webGIS_ali_karimi\projects\1\azimuth\azimuth\azimuth\obj\Debug\azimuth.Properties.Resources.resources
 D:\karshenasi_arshad\webGIS\webGIS_ali_karimi\projects\1\azimuth\azimuth\azimuth\obj\Debug\azimuth.csproj.GenerateResource.Cache
+D:\karshenasi_arshad\webGIS\webGIS_ali_karimi\projects\1\azimuth\azimuth\azimuth\obj\Debug\azimuth.exe
+D:\karshenasi_arshad\webGIS\webGIS_ali_karimi\projects\1\azimuth\azimuth\azimuth\obj\Debug\azimuth.pdb
+D:\karshenasi_arshad\webGIS\webGIS_ali_karimi\projects\1\azimuth\azimuth\azimuth\obj\Debug\azimuth.csproj.AssemblyReference.cache
+D:\karshenasi_arshad\webGIS\webGIS_ali_karimi\projects\1\azimuth\azimuth\azimuth\obj\Debug\azimuth.csproj.SuggestedBindingRedirects.cache
+D:\karshenasi_arshad\webGIS\webGIS_ali_karimi\projects\1\azimuth\azimuth\azimuth\obj\Debug\azimuth.csproj.CoreCompileInputs.cache
