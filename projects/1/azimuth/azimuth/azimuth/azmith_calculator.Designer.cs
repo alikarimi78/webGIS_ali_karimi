@@ -57,9 +57,9 @@
             // 
             this.lat_label.BackColor = System.Drawing.Color.Coral;
             this.lat_label.Font = new System.Drawing.Font("Microsoft YaHei", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lat_label.Location = new System.Drawing.Point(178, 82);
+            this.lat_label.Location = new System.Drawing.Point(178, 78);
             this.lat_label.Name = "lat_label";
-            this.lat_label.Size = new System.Drawing.Size(161, 43);
+            this.lat_label.Size = new System.Drawing.Size(171, 43);
             this.lat_label.TabIndex = 1;
             this.lat_label.Text = "latitude";
             this.lat_label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -81,7 +81,7 @@
             this.lon_label.Font = new System.Drawing.Font("Microsoft YaHei", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lon_label.Location = new System.Drawing.Point(421, 82);
             this.lon_label.Name = "lon_label";
-            this.lon_label.Size = new System.Drawing.Size(161, 43);
+            this.lon_label.Size = new System.Drawing.Size(171, 43);
             this.lon_label.TabIndex = 3;
             this.lon_label.Text = "longitude";
             this.lon_label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -99,11 +99,12 @@
             // 
             // function_button
             // 
+            this.function_button.AutoSize = true;
             this.function_button.BackColor = System.Drawing.Color.MediumOrchid;
             this.function_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.function_button.Location = new System.Drawing.Point(684, 82);
+            this.function_button.Location = new System.Drawing.Point(684, 78);
             this.function_button.Name = "function_button";
-            this.function_button.Size = new System.Drawing.Size(235, 88);
+            this.function_button.Size = new System.Drawing.Size(235, 47);
             this.function_button.TabIndex = 5;
             this.function_button.Text = "click  here to caculate ";
             this.function_button.UseVisualStyleBackColor = false;
@@ -114,7 +115,7 @@
             this.lat1_text.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lat1_text.Location = new System.Drawing.Point(178, 153);
             this.lat1_text.Name = "lat1_text";
-            this.lat1_text.Size = new System.Drawing.Size(161, 41);
+            this.lat1_text.Size = new System.Drawing.Size(171, 41);
             this.lat1_text.TabIndex = 1;
             this.lat1_text.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -123,7 +124,7 @@
             this.lat2_text.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lat2_text.Location = new System.Drawing.Point(178, 259);
             this.lat2_text.Name = "lat2_text";
-            this.lat2_text.Size = new System.Drawing.Size(161, 41);
+            this.lat2_text.Size = new System.Drawing.Size(171, 41);
             this.lat2_text.TabIndex = 3;
             this.lat2_text.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -132,7 +133,7 @@
             this.long1_text.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.long1_text.Location = new System.Drawing.Point(421, 149);
             this.long1_text.Name = "long1_text";
-            this.long1_text.Size = new System.Drawing.Size(161, 41);
+            this.long1_text.Size = new System.Drawing.Size(171, 41);
             this.long1_text.TabIndex = 2;
             this.long1_text.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -141,7 +142,7 @@
             this.long2_text.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.long2_text.Location = new System.Drawing.Point(421, 259);
             this.long2_text.Name = "long2_text";
-            this.long2_text.Size = new System.Drawing.Size(161, 41);
+            this.long2_text.Size = new System.Drawing.Size(171, 41);
             this.long2_text.TabIndex = 4;
             this.long2_text.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -153,13 +154,14 @@
             this.message_label.Name = "message_label";
             this.message_label.Size = new System.Drawing.Size(889, 41);
             this.message_label.TabIndex = 6;
-            this.message_label.Text = "please enter latitude and longitude (degree) coordinate to caculte  azimuth";
+            this.message_label.Text = "please enter latitude and longitude coordinate (degree) to calculte  azimuth";
             this.message_label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // azimuth_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.SkyBlue;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
@@ -176,7 +178,7 @@
             this.Controls.Add(this.lat_label);
             this.Controls.Add(this.point1_label);
             this.DoubleBuffered = true;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "azimuth_form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

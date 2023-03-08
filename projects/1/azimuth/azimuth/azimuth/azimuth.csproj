@@ -53,6 +53,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AZimuth_interface.cs" />
     <Compile Include="azmith_calculator.cs">
       <SubType>Form</SubType>
     </Compile>
