@@ -21,3 +21,15 @@ D:\karshenasi_arshad\webGIS\webGIS_ali_karimi\project 2\counting_media_project\c
 D:\karshenasi_arshad\webGIS\webGIS_ali_karimi\project 2\counting_media_project\counting_media\obj\Debug\counting_media.exe
 D:\karshenasi_arshad\webGIS\webGIS_ali_karimi\project 2\counting_media_project\counting_media\obj\Debug\counting_media.pdb
 D:\karshenasi_arshad\webGIS\webGIS_ali_karimi\project 2\counting_media_project\counting_media\obj\Debug\counting_media.splash_screen.resources
+D:\karshenasi_arshad\webGIS\webGIS_ali_karimi\project 2\counting_media\bin\Debug\counting_media.exe.config
+D:\karshenasi_arshad\webGIS\webGIS_ali_karimi\project 2\counting_media\bin\Debug\counting_media.exe
+D:\karshenasi_arshad\webGIS\webGIS_ali_karimi\project 2\counting_media\bin\Debug\counting_media.pdb
+D:\karshenasi_arshad\webGIS\webGIS_ali_karimi\project 2\counting_media\obj\Debug\counting_media.csproj.AssemblyReference.cache
+D:\karshenasi_arshad\webGIS\webGIS_ali_karimi\project 2\counting_media\obj\Debug\counting_media.csproj.SuggestedBindingRedirects.cache
+D:\karshenasi_arshad\webGIS\webGIS_ali_karimi\project 2\counting_media\obj\Debug\counting_media.count_media.resources
+D:\karshenasi_arshad\webGIS\webGIS_ali_karimi\project 2\counting_media\obj\Debug\counting_media.Properties.Resources.resources
+D:\karshenasi_arshad\webGIS\webGIS_ali_karimi\project 2\counting_media\obj\Debug\counting_media.splash_screen.resources
+D:\karshenasi_arshad\webGIS\webGIS_ali_karimi\project 2\counting_media\obj\Debug\counting_media.csproj.GenerateResource.cache
+D:\karshenasi_arshad\webGIS\webGIS_ali_karimi\project 2\counting_media\obj\Debug\counting_media.csproj.CoreCompileInputs.cache
+D:\karshenasi_arshad\webGIS\webGIS_ali_karimi\project 2\counting_media\obj\Debug\counting_media.exe
+D:\karshenasi_arshad\webGIS\webGIS_ali_karimi\project 2\counting_media\obj\Debug\counting_media.pdb

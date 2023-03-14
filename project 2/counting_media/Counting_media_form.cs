@@ -42,7 +42,7 @@ namespace counting_media
         {
             // filter file extension to choose just htm file! 
             
-            openFile.Filter = "html files (*.html)|*.txt|xml file(*.xml)|*.xml";
+            openFile.Filter = "html files (*.html)|*.html|xml file(*.xml)|*.xml|text files(*.txt) | *.txt";
 
             if (openFile.ShowDialog() == DialogResult.OK)
             {

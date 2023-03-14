@@ -22,30 +22,30 @@ namespace counting_media
             // reading file :
 
             string readed_file = File.ReadAllText(file_path);
-            
+
             int count_of_media = 0;
 
             // coungint <img> tags by a for loop and boolian statement : 
 
-            //for (int i = 0; i < readed_file.Length; i++)
-            //{
-            //    if (i == readed_file.Length - 3)
-            //    {
-            //        break;
-            //    }
+            for (int i = 0; i < readed_file.Length; i++)
+            {
+                if (i == readed_file.Length - 3)
+                {
+                    break;
+                }
 
-            //    bool l0 = readed_file[i].Equals('<');
-            //    bool l1 = readed_file[i + 1].Equals('i');
-            //    bool l2 = readed_file[i + 2].Equals('m');
-            //    bool l3 = readed_file[i + 3].Equals('g');
-            //    if (l0 && l1 && l2 && l3)
-            //    {
-            //        count_of_media++;
-            //    }
-            //}
+                bool l0 = readed_file[i].Equals('<');
+                bool l1 = readed_file[i + 1].Equals('i');
+                bool l2 = readed_file[i + 2].Equals('m');
+                bool l3 = readed_file[i + 3].Equals('g');
+                if (l0 && l1 && l2 && l3)
+                {
+                    count_of_media++;
+                }
+            }
+
             
-            bool a =  readed_file.Contains("<img");
-                return count_of_media;
+            return count_of_media;
         }
     }
 
