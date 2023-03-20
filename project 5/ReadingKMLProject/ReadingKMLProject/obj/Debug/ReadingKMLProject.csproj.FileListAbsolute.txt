@@ -1,0 +1,15 @@
+C:\Users\ali0k\Desktop\project 5\ReadingKMLProject\ReadingKMLProject\bin\Debug\ReadingKMLProject.exe.config
+C:\Users\ali0k\Desktop\project 5\ReadingKMLProject\ReadingKMLProject\bin\Debug\ReadingKMLProject.exe
+C:\Users\ali0k\Desktop\project 5\ReadingKMLProject\ReadingKMLProject\bin\Debug\ReadingKMLProject.pdb
+C:\Users\ali0k\Desktop\project 5\ReadingKMLProject\ReadingKMLProject\obj\Debug\ReadingKMLProject.csproj.AssemblyReference.cache
+C:\Users\ali0k\Desktop\project 5\ReadingKMLProject\ReadingKMLProject\obj\Debug\ReadingKMLProject.csproj.SuggestedBindingRedirects.cache
+C:\Users\ali0k\Desktop\project 5\ReadingKMLProject\ReadingKMLProject\obj\Debug\ReadingKMLProject.ReadingKmlMainform.resources
+C:\Users\ali0k\Desktop\project 5\ReadingKMLProject\ReadingKMLProject\obj\Debug\ReadingKMLProject.Properties.Resources.resources
+C:\Users\ali0k\Desktop\project 5\ReadingKMLProject\ReadingKMLProject\obj\Debug\ReadingKMLProject.csproj.GenerateResource.cache
+C:\Users\ali0k\Desktop\project 5\ReadingKMLProject\ReadingKMLProject\obj\Debug\ReadingKMLProject.csproj.CoreCompileInputs.cache
+C:\Users\ali0k\Desktop\project 5\ReadingKMLProject\ReadingKMLProject\obj\Debug\ReadingKMLProject.exe
+C:\Users\ali0k\Desktop\project 5\ReadingKMLProject\ReadingKMLProject\obj\Debug\ReadingKMLProject.pdb
+C:\Users\ali0k\Desktop\project 5\ReadingKMLProject\ReadingKMLProject\bin\Debug\Oracle.DataAccess.dll
+C:\Users\ali0k\Desktop\project 5\ReadingKMLProject\ReadingKMLProject\obj\Debug\ReadingKMLProject.csproj.CopyComplete
+C:\Users\ali0k\Desktop\project 5\ReadingKMLProject\ReadingKMLProject\bin\Debug\Policy.2.111.Oracle.DataAccess.dll
+C:\Users\ali0k\Desktop\project 5\ReadingKMLProject\ReadingKMLProject\bin\Debug\Policy.2.111.Oracle.DataAccess.config
