@@ -33,6 +33,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReadingKmlMainform));
             this.GroupBox_bot = new System.Windows.Forms.GroupBox();
+            this.insert_to_database = new System.Windows.Forms.Button();
             this.data_grid_view = new System.Windows.Forms.DataGridView();
             this.BtnBrowse = new System.Windows.Forms.Button();
             this.lbl_filepath = new System.Windows.Forms.Label();
@@ -45,6 +46,7 @@
             // 
             // GroupBox_bot
             // 
+            this.GroupBox_bot.Controls.Add(this.insert_to_database);
             this.GroupBox_bot.Controls.Add(this.data_grid_view);
             this.GroupBox_bot.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GroupBox_bot.Location = new System.Drawing.Point(12, 82);
@@ -54,6 +56,18 @@
             this.GroupBox_bot.TabIndex = 6;
             this.GroupBox_bot.TabStop = false;
             this.GroupBox_bot.Text = "coordiantes";
+            // 
+            // insert_to_database
+            // 
+            this.insert_to_database.BackColor = System.Drawing.Color.DarkGray;
+            this.insert_to_database.Location = new System.Drawing.Point(591, 19);
+            this.insert_to_database.Margin = new System.Windows.Forms.Padding(4);
+            this.insert_to_database.Name = "insert_to_database";
+            this.insert_to_database.Size = new System.Drawing.Size(209, 29);
+            this.insert_to_database.TabIndex = 3;
+            this.insert_to_database.Text = "insert selected file to database";
+            this.insert_to_database.UseVisualStyleBackColor = false;
+            this.insert_to_database.Click += new System.EventHandler(this.insert_to_database_Click);
             // 
             // data_grid_view
             // 
@@ -80,7 +94,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.data_grid_view.DefaultCellStyle = dataGridViewCellStyle2;
-            this.data_grid_view.Location = new System.Drawing.Point(6, 33);
+            this.data_grid_view.Location = new System.Drawing.Point(6, 55);
             this.data_grid_view.Name = "data_grid_view";
             this.data_grid_view.ReadOnly = true;
             this.data_grid_view.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
@@ -94,7 +108,7 @@
             this.data_grid_view.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.data_grid_view.RowHeadersWidth = 51;
             this.data_grid_view.RowTemplate.Height = 24;
-            this.data_grid_view.Size = new System.Drawing.Size(794, 370);
+            this.data_grid_view.Size = new System.Drawing.Size(794, 348);
             this.data_grid_view.TabIndex = 0;
             // 
             // BtnBrowse
@@ -105,7 +119,7 @@
             this.BtnBrowse.Name = "BtnBrowse";
             this.BtnBrowse.Size = new System.Drawing.Size(122, 29);
             this.BtnBrowse.TabIndex = 1;
-            this.BtnBrowse.Text = "Browse";
+            this.BtnBrowse.Text = "Choose a KML file";
             this.BtnBrowse.UseVisualStyleBackColor = false;
             this.BtnBrowse.Click += new System.EventHandler(this.BtnBrowse_Click);
             // 
@@ -169,6 +183,7 @@
         private System.Windows.Forms.Label lbl_filepath;
         private System.Windows.Forms.Label lbl_message;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button insert_to_database;
     }
 }
 

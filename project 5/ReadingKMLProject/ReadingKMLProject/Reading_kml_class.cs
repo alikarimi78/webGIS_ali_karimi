@@ -37,7 +37,7 @@ namespace ReadingKMLProject
             }
         }
 
-        public bool Insert_table(string DBConnection, DataTable data_grid_view,int raw_indx)
+        public bool ConnectToDatabase_and_InsertData(string DBConnection, DataTable data_table,int raw_indx)
         {
             try
             {
@@ -48,11 +48,7 @@ namespace ReadingKMLProject
                         conn.Open();
                         OracleTransaction txn = conn.BeginTransaction(IsolationLevel.ReadCommitted);
 
-
-                        // 90th data has "'" character in its name so should skip this!
-
-
-                        string name_string = Convert.ToString(data_grid_view.Rows[raw_indx][0]);
+                        string name_string = Convert.ToString(data_table.Rows[raw_indx][0]);
 
                         if (name_string.Contains('\''))
                         {
@@ -61,25 +57,31 @@ namespace ReadingKMLProject
 
                         try
                         {
-                            cmd.CommandText = @"INSERT INTO KMLCOOR (NAME , X , Y , Z) VALUES ('" + name_string + "','" + data_grid_view.Rows[raw_indx][1] + "','" + data_grid_view.Rows[raw_indx][2] + "','" + data_grid_view.Rows[raw_indx][3] + "')";
+                            cmd.CommandText = @"INSERT INTO KMLCOOR (NAME , X , Y , Z) VALUES (:stringname_p,:x_p,:y_p,:z_p)";
+                            cmd.Parameters.Add(new OracleParameter("stringname_p", name_string));
+                            cmd.Parameters.Add(new OracleParameter("x_p", data_table.Rows[raw_indx][1]));
+                            cmd.Parameters.Add(new OracleParameter("y_p", data_table.Rows[raw_indx][2]));
+                            cmd.Parameters.Add(new OracleParameter("z_p", data_table.Rows[raw_indx][3]));
                             cmd.CommandType = CommandType.Text;
                             cmd.ExecuteNonQuery();
                         }
-                        catch (Exception ex)
+                        catch 
                         {
-                            MessageBox.Show(ex.Message);
                             return false;
                         }
 
 
                         txn.Commit();
+                        
                     }
                 }
+                
+
             }
 
-            catch (Exception ex)
+            catch 
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("An error occurred while inserting to database table", "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
 
@@ -87,48 +89,54 @@ namespace ReadingKMLProject
         }
 
 
-        public bool Insert_table(string connection_string, DataTable table)
-        {
-            throw new NotImplementedException();
-        }
-
         // a method for reading and showing kml component in datatable :
-        public DataTable Read_KML(string file_path)
+        public DataTable ReadKML_and_ShowDataTable(string file_path)
+        
         {
             // Reading KML with XmlReader !!!!
-
-            XmlReaderSettings settings = new XmlReaderSettings();
-            settings.DtdProcessing = DtdProcessing.Parse;
-            XmlReader read = XmlReader.Create(file_path, settings);
-
-            // Creating datatable for KML dataset :
-
-            DataTable datatable_kml = new DataTable();
-            datatable_kml.Columns.Add("Location");
-            datatable_kml.Columns.Add("X");
-            datatable_kml.Columns.Add("Y");
-            datatable_kml.Columns.Add("Z");
-            string nam = "";
-
-            while (read.Read())
+            try
             {
+                XmlReaderSettings settings = new XmlReaderSettings();
+                settings.DtdProcessing = DtdProcessing.Parse;
+                XmlReader read = XmlReader.Create(file_path, settings);
 
+                // Creating datatable for KML dataset :
 
-                string component = read.Name;
-                if (component == "name")
+                DataTable datatable_kml = new DataTable();
+                datatable_kml.Columns.Add("Location");
+                datatable_kml.Columns.Add("X");
+                datatable_kml.Columns.Add("Y");
+                datatable_kml.Columns.Add("Z");
+                string temp = "";
+
+                while (read.Read())
                 {
-                    nam = read.ReadElementContentAsString();
-                }
 
-                if (component == "coordinates")
-                {
-                    string coordin = read.ReadElementContentAsString();
-                    string[] coordinate = coordin.Split(',');
-                    string[] Final = { nam, coordinate[0], coordinate[1], coordinate[2] };
-                    datatable_kml.Rows.Add(Final);
+
+                    string component = read.Name;
+                    if (component == "name")
+                    {
+                        temp = read.ReadElementContentAsString();
+                    }
+
+                    if (component == "coordinates")
+                    {
+                        string coordin = read.ReadElementContentAsString();
+                        string[] coordinate = coordin.Split(',');
+                        string[] Final = { temp, coordinate[0], coordinate[1], coordinate[2] };
+                        datatable_kml.Rows.Add(Final);
+                    }
                 }
+                
+                MessageBox.Show("Reading the file was successful", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return datatable_kml;
             }
-            return datatable_kml;
+            catch
+            {                
+                MessageBox.Show("Reading the file was not successful", "error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                return null;
+            }
+            
         }
     }
 }
