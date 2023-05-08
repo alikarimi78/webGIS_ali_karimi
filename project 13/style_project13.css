@@ -1,0 +1,8 @@
+#container{
+    height: 120px;
+    width: 350px;
+    background-color: khaki;
+    border-style: solid;
+    border-color: red;
+    border-width: 2px;
+}
