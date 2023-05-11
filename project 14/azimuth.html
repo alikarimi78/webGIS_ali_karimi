@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>azimuth calculation</title>
+    <link rel="stylesheet" href="azimuth.css">
+</head>
+<body>
+    <script type="text/javascript" src="azimuth.js"></script>
+    <div id="azimuth_div">
+        <h2>
+            azimuth calculator
+        </h2><p>
+            enter coordinates of two points of line end points in cartesian system (meter) to return azimuth (degree)
+        </p>
+            <label for="x1"></label><input id="x1" type="number" placeholder="X1">
+        <label for="y1"></label><input id="y1" type="number" placeholder="Y1"><br>
+        <label for="x2"></label><input id="x2" type="number" placeholder="X2">
+        <label for="y2"></label><input id="y2" type="number" placeholder="Y2"><br><br>
+        <button id="btn_cal_azimuth" onclick="azimuth_function()" type="submit" >calculate!</button>
+        <p id="result">result</p>
+        <p id="answer"></p>
+    </div>
+
+</body>
+</html>
