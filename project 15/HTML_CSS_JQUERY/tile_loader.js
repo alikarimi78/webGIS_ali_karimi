@@ -1,70 +1,52 @@
-
 function show_tile() {
-
     let row = $("#row").val();
     let col = $("#col").val();
     let zoom = $("#zoom").val();
-    let tile_container = document.getElementById("tile_div");
-    let xhttp= new XMLHttpRequest();
-    xhttp.onreadystatechange= function() {
-        if (this.readyState === 4 && this.status === 200) {
+    let url = 'https://c.tile-cyclosm.openstreetmap.fr/cyclosm/' + zoom + '/' + col + '/' + row + '.png';
 
-            let img = new Image();
-            img.src = 'https://c.tile-cyclosm.openstreetmap.fr/cyclosm/' + zoom + '/' + col + '/' + row + '.png';
+    let img = $("<img>").attr("src", url);
+    let tile_container = $("#tile_div");
 
-            tile_container.innerHTML = '';
+    // Clear the tile_container before appending the new image
+    tile_container.empty();
 
-            img.onload = function () {
-                tile_container.appendChild(img);
-            }
+    img.on("load", function() {
+        tile_container.append(img);
+    });
 
-            img.onerror = function () {
-                let errorText = document.createElement("p");
-                errorText.textContent = 'Failed to load image';
-                tile_container.appendChild(errorText);
-            };
-
-        }else {
-            tile_container.innerHTML = '';
-            let errorText = document.createElement("p");
-            errorText.textContent = 'Failed to load image';
-            tile_container.appendChild(errorText);
-        }
-    };
-
-    xhttp.open("GET",'https://c.tile-cyclosm.openstreetmap.fr/cyclosm/' + zoom + '/' + col + '/' + row + '.png',true);
-    xhttp.send();
-
+    img.on("error", function() {
+        let errorText = $("<p>").text('Failed to load image: ' + url);
+        tile_container.append(errorText);
+    });
 }
 
-$(document).ready(function(){
-    $("#left_tile").click(function(){
-        let col_val = $("#col");
-        let col_int = parseInt(col_val.val());
-        col_val.val(col_int - 1);
-    });
-});
 
-$(document).ready(function(){
-    $("#right_tile").click(function(){
-        let col_val = $("#col");
-        let col_int = parseInt(col_val.val());
-        col_val.val(col_int + 1);
-    });
-});
+function left_tile() {
+    let col_val = $("#col");
+    let col_int = parseInt(col_val.val());
+    col_val.val(col_int - 1);
+    show_tile();
+}
 
-$(document).ready(function(){
-    $("#top_tile").click(function(){
-        let row_val = $("#row");
-        let row_int = parseInt(row_val.val());
-        row_val.val(row_int - 1);
-    });
-});
+function right_tile() {
+    let col_val = $("#col");
+    let col_int = parseInt(col_val.val());
+    col_val.val(col_int + 1);
+    show_tile();
+}
 
-$(document).ready(function(){
-    $("#bottom_tile").click(function(){
-        let row_val = $("#row");
-        let row_int = parseInt(row_val.val());
-        row_val.val(row_int + 1);
-    });
-});
+function top_tile() {
+    let row_val = $("#row");
+    let row_int = parseInt(row_val.val());
+    row_val.val(row_int - 1);
+    show_tile();
+}
+
+
+function bottom_tile() {
+    let row_val = $("#row");
+    let row_int = parseInt(row_val.val());
+    row_val.val(row_int + 1);
+    show_tile();
+}
+

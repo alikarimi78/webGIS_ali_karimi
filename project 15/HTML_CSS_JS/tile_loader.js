@@ -25,22 +25,26 @@ function left_tile(){
     let col_val = document.getElementById("col");
     let col_int  = parseInt(col_val.value);
     col_val.value = col_int - 1;
+    show_tile();
 }
 
 function right_tile(){
     let col_val = document.getElementById("col");
     let col_int  = parseInt(col_val.value);
     col_val.value = col_int + 1;
+    show_tile();
 }
 
 function top_tile(){
     let row_val = document.getElementById("row");
     let row_int  = parseInt(row_val.value);
     row_val.value = row_int - 1;
+    show_tile();
 }
 
 function bottom_tile(){
     let row_val = document.getElementById("row");
     let row_int  = parseInt(row_val.value);
     row_val.value = row_int + 1;
+    show_tile();
 }

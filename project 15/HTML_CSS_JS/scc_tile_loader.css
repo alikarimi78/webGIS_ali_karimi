@@ -1,15 +1,16 @@
 #zoom{
-    text-align: center;
+    /*margin-left: 50px;*/
+    /*text-align: center;*/
     width: 70px;
 }
 
 #row{
-    text-align: center;
+    /*text-align: center;*/
     width: 70px;
 }
 
 #col{
-    text-align: center;
+    /*text-align: center;*/
     width: 70px;
 }
 
@@ -43,8 +44,31 @@
     margin-top: 5px;
     margin-left: 390px;
     width: 200px;
-    height: 120px;
+    height: 130px;
     border: solid red;
     text-align: center;
     /*float: left;*/
+}
+
+#row_col{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    width: 600px;
+    height: 50px;
+    border: solid blue;
+    background-color: bisque ;
+}
+#row_col2{
+margin: auto;
+}
+
+
+body {
+    font-size: 110%;
+    font-family: verdana, sans-serif;
+    background-image: url('pattern.png');
+    margin: 25px;
+    color: dodgerblue;
 }
