@@ -15,14 +15,14 @@
 <div id="container" > <div id="map_container"></div>
 <div id="welcome"> welcome to switch layer project<br>
     this project uses openlayer to switch between layers : <br><br>
-    <label for="layer1Checkbox"></label><input type="checkbox" id="layer1Checkbox" onchange="toggleLayer()" checked> Layer 1
-    <label for="layer2Checkbox"></label><input type="checkbox" id="layer2Checkbox" onchange="toggleLayer()" checked> Layer 2
-    <label for="layer3Checkbox"></label><input type="checkbox" id="layer3Checkbox" onchange="toggleLayer()" checked> Layer 3
+    <label for="layer1Checkbox"></label><input type="checkbox" id="layer1Checkbox" onchange="toggleLayer()" checked> OMS layer<br>
+    <label for="layer2Checkbox"></label><input type="checkbox" id="layer2Checkbox" onchange="toggleLayer()" checked> USA states<br>
+    <label for="layer3Checkbox"></label><input type="checkbox" id="layer3Checkbox" onchange="toggleLayer()" checked> Border of countries<br>
 </div></div>
 
 <script>
 
-    let layer1 = new ol.layer.Tile
+    let osm_layer = new ol.layer.Tile
     ({
         source: new ol.source.XYZ
         ({
@@ -31,7 +31,7 @@
         visible : true
     });
 
-    const layer2 = new ol.layer.Vector({
+    const usa_state = new ol.layer.Vector({
         source: new ol.source.Vector({
             url: 'http://localhost:8080/geoserver/topp/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=topp%3Astates&outputFormat=application%2Fjson',
             format: new ol.format.GeoJSON()
@@ -39,7 +39,7 @@
         visible : true
     });
 
-    const layer3 = new ol.layer.Vector({
+    const borders = new ol.layer.Vector({
         source: new ol.source.Vector({
             url : 'http://localhost:8080/geoserver/ne/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=ne%3Acountries&outputFormat=application%2Fjson',
             format: new ol.format.GeoJSON()
@@ -55,7 +55,7 @@
 
 
     let map =  new ol.Map({
-        layers : [layer1, layer2,layer3],
+        layers : [osm_layer, usa_state,borders],
         target : "map_container",
         view : sampleView
 
@@ -77,26 +77,26 @@
         const isChecked3 = checkbox3.checked;
 
         if (isChecked1) {
-            layer1.setVisible(true);
+            osm_layer.setVisible(true);
         } if(isChecked1 === false) {
-            layer1.setVisible(false);
+            osm_layer.setVisible(false);
         }
         if (isChecked2) {
-            layer2.setVisible(true)
+            usa_state.setVisible(true)
         } if(isChecked2 === false) {
-            layer2.setVisible(false)
+            usa_state.setVisible(false)
         }
         if (isChecked3) {
-           layer3.setVisible(true);
+           borders.setVisible(true);
         } if(isChecked3 === false) {
-            layer3.setVisible(false)
+            borders.setVisible(false)
         }
     }
 
     // Initial layer visibility
-    toggleLayer(layer1);
-    toggleLayer(layer2);
-    toggleLayer(layer3);
+    toggleLayer(osm_layer);
+    toggleLayer(usa_state);
+    toggleLayer(borders);
 
 </script>
 
