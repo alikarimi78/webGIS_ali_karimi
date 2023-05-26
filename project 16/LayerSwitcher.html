@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Layer Switcher</title>
+
+    <script src="js/LayerSwitcher.js"></script>
+    <script src="js/ol.js"></script>
+
+    <link rel="stylesheet" href="css/ol.css" >
+    <link rel="stylesheet" href="css/LayerSwitcher.css">
+
+</head>
+<body>
+<div id="container" > <div id="map_container"></div>
+<div id="welcome"> welcome to switch layer project<br>
+    this project uses openlayer to switch between layers : <br><br>
+    <label for="layer1Checkbox"></label><input type="checkbox" id="layer1Checkbox" onchange="toggleLayer()" checked> Layer 1
+    <label for="layer2Checkbox"></label><input type="checkbox" id="layer2Checkbox" onchange="toggleLayer()" checked> Layer 2
+    <label for="layer3Checkbox"></label><input type="checkbox" id="layer3Checkbox" onchange="toggleLayer()" checked> Layer 3
+</div></div>
+
+<script>
+
+    let layer1 = new ol.layer.Tile
+    ({
+        source: new ol.source.XYZ
+        ({
+            url: 'https://tile.openstreetmap.bzh/br/{z}/{x}/{y}.png'
+        }),
+        visible : true
+    });
+
+    const layer2 = new ol.layer.Vector({
+        source: new ol.source.Vector({
+            url: 'http://localhost:8080/geoserver/topp/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=topp%3Astates&outputFormat=application%2Fjson',
+            format: new ol.format.GeoJSON()
+        }),
+        visible : true
+    });
+
+    const layer3 = new ol.layer.Vector({
+        source: new ol.source.Vector({
+            url : 'http://localhost:8080/geoserver/ne/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=ne%3Acountries&outputFormat=application%2Fjson',
+            format: new ol.format.GeoJSON()
+        }),
+        visible: true
+    });
+
+    let sampleView= new ol.View({
+        center: [51, 32],
+        zoom: 6,
+        projection: 'EPSG:4326'
+    });
+
+
+    let map =  new ol.Map({
+        layers : [layer1, layer2,layer3],
+        target : "map_container",
+        view : sampleView
+
+    })
+
+    // Add the LayerSwitcher to the map's control panel
+
+    map.addControl(new ol.control.ZoomSlider());
+
+    // Function to toggle layers
+    function toggleLayer() {
+        const checkbox1 = document.getElementById("layer1Checkbox");
+        const isChecked1 = checkbox1.checked;
+
+        const checkbox2 = document.getElementById("layer2Checkbox");
+        const isChecked2 = checkbox2.checked;
+
+        const checkbox3 = document.getElementById("layer3Checkbox");
+        const isChecked3 = checkbox3.checked;
+
+        if (isChecked1) {
+            layer1.setVisible(true);
+        } if(isChecked1 === false) {
+            layer1.setVisible(false);
+        }
+        if (isChecked2) {
+            layer2.setVisible(true)
+        } if(isChecked2 === false) {
+            layer2.setVisible(false)
+        }
+        if (isChecked3) {
+           layer3.setVisible(true);
+        } if(isChecked3 === false) {
+            layer3.setVisible(false)
+        }
+    }
+
+    // Initial layer visibility
+    toggleLayer(layer1);
+    toggleLayer(layer2);
+    toggleLayer(layer3);
+
+</script>
+
+
+</body>
+</html>
