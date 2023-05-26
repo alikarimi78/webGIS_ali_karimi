@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>leaflet project</title>
+
+    <link rel="stylesheet" href="css/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="js/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<!--    <script src="js/leaflet-omnivore.min.js"></script>-->
+    <script src="js/leaflet-omnivore.min.js"></script>
+    <link rel="stylesheet" href="css/leafletProject.css">
+    <script src="js/leafletProject.js"></script>
+</head>
+<body>
+<div id="container" > <div id="map_container"></div>
+  </div>
+
+<script>
+    // Create the map
+    const map = L.map("map_container").setView([32, 51], 6);
+
+    // Add the base layer (OpenStreetMap)
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+
+    // Add other layers
+
+    // var kmllayer = omn
+    // omnivore.geoJSON('http://localhost:8080/geoserver/topp/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=topp%3Astates&outputFormat=application%2Fjson').addTo(map);
+
+</script>
+
+</body>
+</html>
